@@ -6,9 +6,10 @@ const db = require("../data/dbConfig");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    db.select('*').from('accounts')
-    .then(accounts => {
-        res.status(200).json(accounts)
+    db.select("*")
+    .from("accounts")
+    .then(account => {
+        res.status(200).json(account)
     }).catch(err => {
         console.log(err)
         res.status(500).json({error: "You shall not get list of accounts"})

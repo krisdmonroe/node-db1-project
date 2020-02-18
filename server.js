@@ -8,7 +8,7 @@ server.use(express.json());
 server.use('/api/accounts', AccountsRouter)
 
 server.get('/', (req, res) => {
-    res.send('<h3>DB Helpers with knex</h3>');
+    res.send('<h3>DB Helpers with knex :D</h3>');
   });
   
 module.exports = server;
